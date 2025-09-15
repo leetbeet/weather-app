@@ -1,5 +1,5 @@
 {
-  "name": "webpack-template",
+  "name": "weather-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leetbeet/webpack-template.git"
+    "url": "git+https://github.com/leetbeet/weather-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leetbeet/webpack-template/issues"
+    "url": "https://github.com/leetbeet/weather-app/issues"
   },
-  "homepage": "https://github.com/leetbeet/webpack-template#readme",
+  "homepage": "https://github.com/leetbeet/weather-app#readme",
   "description": "",
   "devDependencies": {
     "@eslint/css": "^0.10.0",
