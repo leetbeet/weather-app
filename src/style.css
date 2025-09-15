@@ -6,6 +6,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -30,4 +32,26 @@ button {
 
 button:hover {
   filter: brightness(90%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px rgba(32, 32, 32, 0.5);
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.container > div:nth-child(1) {
+  padding-right: 16px;
+  border-right: 1px solid black;
+}
+
+.hidden {
+  visibility: hidden;
 }
