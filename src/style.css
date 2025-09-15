@@ -40,7 +40,7 @@ button:hover {
   padding: 16px;
   border: 1px solid black;
   border-radius: 8px;
-  box-shadow: 1px 1px 4px rgba(32, 32, 32, 0.5);
+  box-shadow: 1px 1px 8px rgba(32, 32, 32, 0.5);
   margin: 0 auto;
   width: fit-content;
 }
