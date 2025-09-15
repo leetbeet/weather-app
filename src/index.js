@@ -14,3 +14,16 @@ const getWeatherData = async (location) => {
     console.error('Error fetching data:', error.message);
   }
 };
+
+const processWeatherData = async (response) => {
+  const data = await response.json();
+  return {
+    temp: data.currentConditions.temp,
+    condition: data.currentConditions.conditions,
+    feelsLike: data.currentConditions.feelslike,
+    humidity: data.currentConditions.humidity,
+    windSpeed: data.currentConditions.windspeed,
+    windDir: data.currentConditions.winddir,
+    precipChance: data.currentConditions.precipprob,
+  };
+};
