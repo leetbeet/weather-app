@@ -6,8 +6,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
 }
 
 header {
@@ -54,4 +52,9 @@ button:hover {
 
 .hidden {
   visibility: hidden;
+}
+
+.loading-msg {
+  display: flex;
+  justify-content: center;
 }

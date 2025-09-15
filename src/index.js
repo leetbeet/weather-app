@@ -1,7 +1,11 @@
 import './style.css';
 
 const getWeatherData = async (location) => {
+  const loadingMsg = document.querySelector('.loading-msg');
   try {
+    const container = document.querySelector('.container');
+    container.className = 'container hidden';
+    loadingMsg.className = 'loading-msg';
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=REWV8CUHUMFRVEXFGDJADGCEL`
     );
@@ -10,6 +14,7 @@ const getWeatherData = async (location) => {
 
     processWeatherData(response);
   } catch (error) {
+    loadingMsg.className = 'loading-msg hidden';
     alert(`Error fetching data, ${error.message}`);
   }
 };
@@ -28,6 +33,8 @@ const processWeatherData = async (response) => {
 };
 
 const displayWeatherData = (weather) => {
+  const loadingMsg = document.querySelector('.loading-msg');
+  loadingMsg.className = 'loading-msg hidden';
   const container = document.querySelector('.container');
   container.className = 'container';
   const cloudy = document.querySelector('#cloudy');
