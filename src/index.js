@@ -8,8 +8,7 @@ const getWeatherData = async (location) => {
 
     if (!response.ok) throw new Error(`Server error: ${response.status}`);
 
-    const data = await response.json();
-    return data;
+    processWeatherData(response);
   } catch (error) {
     console.error('Error fetching data:', error.message);
   }
@@ -27,3 +26,10 @@ const processWeatherData = async (response) => {
     precipChance: data.currentConditions.precipprob,
   };
 };
+
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const location = document.querySelector('input').value;
+  getWeatherData(location);
+});
